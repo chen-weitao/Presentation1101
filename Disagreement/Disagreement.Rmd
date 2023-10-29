@@ -1,0 +1,336 @@
+---
+title: "Disagreement in the Equity Options Market and Stock Returns"
+author: 
+  - "Benjamin Golez and Garrick Aden-Buie"
+  - "汇报人：陈伟涛"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+      
+---
+
+```{r xaringan-themer, include=FALSE, warning= FALSE}
+library(xaringanthemer)
+style_duo_accent(primary_color = "#0055A5",
+                 secondary_color = "#E6E6E6",
+                 header_font_google= google_font("Times New Roman"),
+                 text_font_google = google_font("Times New Roman"),
+                 code_font_google = google_font("Times New Roman"),
+                 )	
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 结论
+
+- 投资者分歧降低股票未来收益率
+
+- 盈利与预期偏差，投资者分歧和未来预期收益率的相关性
+
+- 在高贝塔、难以卖空的股票中更明显，二者相关性
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 数据来源
+- Chicago Board of Options Exchange (CBOE)
+
+  International Securities Exchange (ISE)
+
+- 交易者
+
+1. Customers：散户和机构投资者（对冲基金）
+
+2. Firms：Proprietary Trading Desks(和做市商的相关性0.44)
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 核心变量
+
+- 将投资者分歧定义为合成股票多头敞口和空头敞口的抵消程度
+$$\small\\Disagreement=Min(POS,NEG)$$
+
+
+
+$$POS=\small\sum{\left| {{\Delta }^{Call}} \right|\left( O{{B}^{Call}}+C{{B}^{Call}} \right)+\left| {{\Delta }^{Put}} \right|\left( O{{S}^{Put}}+C{{S}^{Put}} \right)}$$
+
+$$NEG=\small\sum{\left| {{\Delta }^{Put}} \right|\left( O{{B}^{Put}}+C{{B}^{Put}} \right)+\left| {{\Delta }^{Call}} \right|\left( O{{S}^{Call}}+C{{S}^{Call}} \right)}$$
+- 标准化
+$$Disagreement=\small\frac{Min(POS,NEG)}{Max(POS,NEG)}$$
+- 去除开盘卖出看涨期权的成交量
+$$DisagreementSC=\small\frac{Min(POS,NE{{G}^{SC}})}{Max(POS,NE{{G}^{SC}})}$$
+
+$$NE{{G}^{SC}}=\small\sum{\left| {{\Delta }^{Put}} \right|\left( O{{B}^{Put}}+C{{B}^{Put}} \right)+\left| {{\Delta }^{Call}} \right|\left( C{{S}^{Call}} \right)}$$
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 控制变量
+
+- 经标准化后的投资者方向性指标
+
+$$Directional=\small\left\{ \begin{array}{*{35}{l}}
+   [Max(POS,NEG)-Min(POS,NEG)] & \text{ }if\text{ }POS\ge NEG  \\
+   [Max(POS,NEG)-Min(POS,NEG)]\times -(1) & \text{ }if\text{ }POS<NEG  \\
+\end{array} \right.$$
+
+$$Directional=\small\frac{Directional}{Max(POS,NEG)}$$
+
+- 其余投资者分歧指标：分析师预测离散度、换手率和共同基金持股分散度
+
+- 和股票特征相关的指标：市值、账面市值比、异质性波动率、动量和机构持有量等
+
+- 和期权特征相关的指标：期权未平仓量、期权交易量、Put-call交易量比值、隐含波动率、隐含偏度和Call-put波动率价差等
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 描述性统计
+
+```{r, echo=FALSE}
+library(kableExtra)
+library(readxl)
+Statistics <- read_excel("描述性统计.xlsx", .name_repair = "minimal")
+kbl(Statistics,caption = "表1 描述性统计") %>%
+  kable_styling(bootstrap_options = c())
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 投资组合收益率
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_214550.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 投资组合收益率
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_215525.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## Fama-MacBeth对下月月度收益率
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223552.png?raw=true")
+```
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## Fama-MacBeth对下月月度收益率
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223746.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 影响机制
+
+- Atmaz and Basak (2018)说明了即使没有卖空限制，分歧也可能与未来回报呈负相关。
+
+- Hong and Sraer (2016)认为高beta的股票有更大的投资者分歧，由于隐形的卖空限制，更容易被高估。
+
+- 通过盈利意外 (earning surprise, SUE) 的高低来定义积极和消极的现金流新闻。
+
+$$SUE_{i,q}^{SRW}=\frac{{{E}_{i,q}}-{{E}_{i,q-4}}}{{{P}_{i,q}}}$$
+
+其中， $\alpha+\beta$ 是实际的季度每股盈利（earnings per share），对公司 $i$ 和季度 $q$ 。 ${E}_{i,q-4}$去年同季度的每股盈利。  ${P}_{i,q}$是财报发布（earnings announcement）前20天的股价。 $SRW$是季节性随机游走（seasonal random walk）
+- 基于分析师预测来定义盈利意外，每股实际盈利减去平均的分析师预测
+$$SUE_{i,q}^{Analyst\text{ }}=\frac{{{E}_{i,q}}-E_{i,q}^{Analyst\text{ }}}{{{P}_{i,q}}}$$
+---
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 累计异象收益，因变量
+
+收益公告日后的累积异象收益 (CAR) 定义为股票的已实现累积收益率与其预期累积收益率之间的差异，其中预期收益率使用资本资产定价模型 (CAPM) 来估计。
+
+$$\begin{align}
+  &  CAR\text{ }{{[1,5]}_{i,t}}={{\alpha }^{High\text{ }}}Hig{{h}_{i,t}}+{{\alpha }^{Medium\text{ }}}Mediu{{m}_{i,t}}+{{\alpha }^{Low\text{ }}}Lo{{w}_{i,t}} \\ 
+ & \,\,+{{\beta }^{Dis\times High\text{ }}}Disagreemen{{t}_{i,t-1}}\times Hig{{h}_{i,t}} \\ 
+ & \,\,+{{\beta }^{Dis\times Medium\text{ }}}Disagreemen{{t}_{i,t-1}}\times Mediu{{m}_{i,t}} \\ 
+ & \,\,+{{\beta }^{Dis\times Low\text{ }}}Disagreemen{{t}_{i,t-1}}\times Lo{{w}_{i,t}}+Control{{s}_{i,t}}+{{\varepsilon }_{i,t}}  
+\end{align}$$
+
+其中CAR为收益公告日后第1至5天的累计超额收益；disagreement是在收益公告前10天的分歧；High, Medium, Low是虚拟变量，分别指示SUE排在前20%，中间40%，最后20%。如果排名不是这两个的合集，那就去除这些样本。由于波动率策略交易在财报发布前后比较普遍，在估计分歧时，去除平值期权。 cumulative abnormal returns是财报发布后五天的累计超额收益。
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 现金流分类回归
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_233741.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 现金流分类回归
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234358.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 现金流分类回归
+
+```{r, echo=FALSE,fig.align='center', out.width='100%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234417.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## Nagel(2005)表面机构持有量低时，只能融券很少的股份，增加了卖空限制
+
+```{r, echo=FALSE,fig.align='center', out.width='95%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234924.png?raw=true")
+```
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## Nagel(2005)表面机构持有量低时，只能融券很少的股份，增加了卖空限制
+
+```{r, echo=FALSE,fig.align='center', out.width='95%'}
+knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234948.png?raw=true")
+```
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 稳健性检验
+
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## remark.js 与 xaringan 的区别
+remark.js （左）与 **xaringan** （右）：
+
+.pull-left[
+1. 需要一个 HTML 容器文件；
+
+1. 只能用 Markdown；
+
+1. 若想自动播放幻灯片需要写 JavaScript；
+
+1. 需手工配置 MathJax；
+
+1. 用 `*` 高亮一行代码；
+
+1. 编辑 Markdown 之后需要刷新浏览器看结果；
+]
+
+.pull-right[
+1. 用 R Markdown 文档生成幻灯片；
+
+1. Markdown 里可以嵌入 R 代码；
+
+1. 可用 `autoplay` 选项自动播放；
+
+1. MathJax 无需特别配置；<sup>*</sup>
+
+1. 用 `{{}}` 高亮一行代码;
+
+1. 用 RStudio 插件“Infinite Moon Reader”自动预览幻灯片；
+]
+
+.footnote[[*] 下一页有数学公式例子。]
+
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 参考文献
+
+1. Atmaz, A., & Basak, S. Belief dispersion in the stock market. *Journal of Finance*, 2018, 73(3): 1225–1279.
+
+2. Golez, B., & Goyenko, R. Disagreement in the equity options market and stock returns. *The Review of Financial Studies*, 2022, 35(3): 1443–1479.
+
+3. Hong, H., & Sraer. D. A. Speculative betas. *Journal of Finance*, 2016, 71(5): 2095–2144.
+
+4. Nagel, S. Short sales, institutional investors and the cross-section of stock returns. *Journal of Financial*, 2005, 78(2): 277–309.
+
+---
+
+class: center, middle
+
+# 谢谢
+本幻灯片发布于 [**GitHub**](https://github.com/yihui/xaringan) 
+
