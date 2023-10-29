@@ -18,21 +18,21 @@
  *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Times+New+Roman&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Times+New+Roman&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Times+New+Roman&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
 
 
 :root {
   /* Fonts */
-  --text-font-family: 'Times New Roman';
+  --text-font-family: 'Noto Sans';
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Times New Roman';
+  --header-font-family: 'Noto Sans';
   --header-font-is-google: 1;
   --header-font-family-fallback: Georgia, serif;
-  --code-font-family: 'Times New Roman';
+  --code-font-family: 'Noto Sans';
   --code-font-is-google: 1;
   --base-font-size: 20px;
   --text-font-size: 1rem;
@@ -44,20 +44,20 @@
 
   /* Colors */
   --text-color: #000000;
-  --header-color: #0055A5;
+  --header-color: #1E64A5;
   --background-color: #FFFFFF;
-  --link-color: #0055A5;
-  --text-bold-color: #0055A5;
+  --link-color: #1E64A5;
+  --text-bold-color: #1E64A5;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #000000;
   --inverse-background-color: #E6E6E6;
   --inverse-header-color: #000000;
-  --inverse-link-color: #0055A5;
-  --title-slide-background-color: #0055A5;
+  --inverse-link-color: #1E64A5;
+  --title-slide-background-color: #1E64A5;
   --title-slide-text-color: #FFFFFF;
-  --header-background-color: #0055A5;
+  --header-background-color: #1E64A5;
   --header-background-text-color: #FFFFFF;
-  --primary: #0055A5;
+  --primary: #1E64A5;
   --secondary: #E6E6E6;
   --white: #FFFFFF;
   --black: #000000;
@@ -101,10 +101,10 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #0055A5;
+  color: #1E64A5;
 }
 .remark-slide-number {
-  color: #0055A5;
+  color: #1E64A5;
   opacity: 1;
   font-size: 0.9rem;
 }
@@ -152,10 +152,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #0055A599;
+  color: #1E64A599;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #0055A5;
+  color: #1E64A5;
 }
 .right-column {
   width: 75%;

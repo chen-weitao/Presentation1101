@@ -18,11 +18,11 @@ output:
 
 ```{r xaringan-themer, include=FALSE, warning= FALSE}
 library(xaringanthemer)
-style_duo_accent(primary_color = "#0055A5",
+style_duo_accent(primary_color = "#1E64A5",
                  secondary_color = "#E6E6E6",
-                 header_font_google= google_font("Times New Roman"),
-                 text_font_google = google_font("Times New Roman"),
-                 code_font_google = google_font("Times New Roman"),
+                 header_font_google= google_font("Noto Sans"),
+                 text_font_google = google_font("Noto Sans"),
+                 code_font_google = google_font("Noto Sans"),
                  )	
 ```
 
@@ -246,7 +246,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Nagel(2005)表面机构持有量低时，只能融券很少的股份，增加了卖空限制
+## Nagel(2005
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234924.png?raw=true")
@@ -332,5 +332,5 @@ background-position: 90% 8%
 class: center, middle
 
 # 谢谢
-本幻灯片发布于 [**GitHub**](https://github.com/yihui/xaringan) 
+本幻灯片发布于 [**GitHub**](https://github.com/chen-weitao/Presentation1101) 
 
