@@ -5,8 +5,12 @@
     <meta charset="utf-8" />
     <meta name="author" content="Benjamin Golez and Garrick Aden-Buie" />
     <meta name="author" content="汇报人：陈伟涛" />
-    <meta name="date" content="2023-10-30" />
+    <meta name="date" content="2023-10-31" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
@@ -25,10 +29,12 @@ class: center, middle, inverse, title-slide
 ### 汇报人：陈伟涛
 ]
 .date[
-### 2023-10-30
+### 2023-10-31
 ]
 
 ---
+
+
 
 
 
@@ -117,8 +123,9 @@ background-position: 90% 8%
 
 ## 描述性统计
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
-&lt;caption&gt;表1 描述性统计&lt;/caption&gt;
+
+&lt;table class="table table-striped table-hover table-condensed" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;表1 描述性统计&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
@@ -131,117 +138,222 @@ background-position: 90% 8%
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Disagreement &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+  &lt;tr grouplength="5"&gt;&lt;td colspan="7" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;A. All stocks&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Disagreement &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.32 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.24 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 326099 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Directional &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Directional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.49 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 326099 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; AnalystDis &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; AnalystDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 37.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 283460 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Disagreement &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; StockTurn &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 230.75 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 326097 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Directional &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; MFDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 314767 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="5"&gt;&lt;td colspan="7" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;B. 500 largest stocks&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Disagreement &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.21 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79174 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; AnalystDis &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Directional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.34 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79174 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Disagreement &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; AnalystDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.60 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 77346 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Directional &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; StockTurn &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8.76 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79174 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; AnalystDis &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Disagreement &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Directional &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; AnalystDis &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; MFDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 78135 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 相关系数
+
+&lt;table class="table table-striped table-hover table-condensed" style="font-size: 15.5px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;表2 相关系数表&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Disagreement &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Directional &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; AnalystDis &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; StockTurn &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; MFDis &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="6"&gt;&lt;td colspan="6" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;A. All stocks&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Disagreement &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Directional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; AnalystDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; StockTurn &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; MFDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.49 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; log(Size) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.37 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.49 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="6"&gt;&lt;td colspan="6" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;B. 500 largest stocks&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Disagreement &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Directional &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.06 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; AnalystDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; StockTurn &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.06 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.11 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; MFDis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; log(Size) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.37 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.44 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ---
 
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
@@ -268,7 +380,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Fama-MacBeth对下月月度收益率
+## Fama-MacBeth对下月收益率
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_223552.png?raw=true" width="100%" style="display: block; margin: auto;" /&gt;
 ---
@@ -277,7 +389,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Fama-MacBeth对下月月度收益率
+## Fama-MacBeth对下月收益率
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_223746.png?raw=true" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -289,26 +401,27 @@ background-position: 90% 8%
 
 ## 影响机制
 
-- Atmaz and Basak (2018)说明了即使没有卖空限制，分歧也可能与未来回报呈负相关。
+- Atmaz and Basak (2018)认为盈利偏差影响分歧和预期收益率的关系
 
-- Hong and Sraer (2016)认为高beta的股票有更大的投资者分歧，由于隐形的卖空限制，更容易被高估。
+- 基于季节性随机游走的盈利意外定义（Earnings Surprise,  `\(SUE\)`）：
+`$$SUE_{i,q}^{SRW\text{ }}=\frac{{{E}_{i,q}}-E_{i,q-4}^{\text{ }}}{{{P}_{i,q}}}$$`
+其中，  `\(i\)` 是某个公司； `\(q\)` 是某个季度；  `\({E}_{i,q}\)` 是当季度每股盈利； `\({E}_{i,q-4}\)` 是去年同季度的每股盈利； `\({P}_{i,q}\)`是财报发布前20天的股价； `\({SRW}\)`是季节性随机游走（Seasonal Random Walk）
 
-- 通过盈利意外 (earning surprise, SUE) 的高低来定义积极和消极的现金流新闻。
-
-`$$SUE_{i,q}^{SRW}=\frac{{{E}_{i,q}}-{{E}_{i,q-4}}}{{{P}_{i,q}}}$$`
-
-其中， `\(\alpha+\beta\)` 是实际的季度每股盈利（earnings per share），对公司 `\(i\)` 和季度 `\(q\)` 。 `\({E}_{i,q-4}\)`去年同季度的每股盈利。  `\({P}_{i,q}\)`是财报发布（earnings announcement）前20天的股价。 `\(SRW\)`是季节性随机游走（seasonal random walk）
-- 基于分析师预测来定义盈利意外，每股实际盈利减去平均的分析师预测
+- 基于分析师预测（ `\(Analyst\)`）来定义盈利意外：
 `$$SUE_{i,q}^{Analyst\text{ }}=\frac{{{E}_{i,q}}-E_{i,q}^{Analyst\text{ }}}{{{P}_{i,q}}}$$`
+其中， `\({E}_{i,q}^{Analyst}\)` 是分析师盈利预测平均值，其余定义不变
+
 ---
+
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
 background-size: 100px
 background-position: 90% 8%
 
-## 累计异象收益，因变量
+## 影响机制
 
-收益公告日后的累积异象收益 (CAR) 定义为股票的已实现累积收益率与其预期累积收益率之间的差异，其中预期收益率使用资本资产定价模型 (CAPM) 来估计。
+- Hong and Sraer (2016)认为负向效应在高beta的股票中更为显著
 
+- 回归方程如下：
 `$$\begin{align}
   &amp;  CAR\text{ }{{[1,5]}_{i,t}}={{\alpha }^{High\text{ }}}Hig{{h}_{i,t}}+{{\alpha }^{Medium\text{ }}}Mediu{{m}_{i,t}}+{{\alpha }^{Low\text{ }}}Lo{{w}_{i,t}} \\ 
  &amp; \,\,+{{\beta }^{Dis\times High\text{ }}}Disagreemen{{t}_{i,t-1}}\times Hig{{h}_{i,t}} \\ 
@@ -316,7 +429,11 @@ background-position: 90% 8%
  &amp; \,\,+{{\beta }^{Dis\times Low\text{ }}}Disagreemen{{t}_{i,t-1}}\times Lo{{w}_{i,t}}+Control{{s}_{i,t}}+{{\varepsilon }_{i,t}}  
 \end{align}$$`
 
-其中CAR为收益公告日后第1至5天的累计超额收益；disagreement是在收益公告前10天的分歧；High, Medium, Low是虚拟变量，分别指示SUE排在前20%，中间40%，最后20%。如果排名不是这两个的合集，那就去除这些样本。由于波动率策略交易在财报发布前后比较普遍，在估计分歧时，去除平值期权。 cumulative abnormal returns是财报发布后五天的累计超额收益。
+- CAR（Cumulative Abnormal Returns）为财报发布日后第1至5天的累计超额收益（相对于市场风险）
+
+- Disagreement为财报发布日前10天的平均分歧（不包括平值期权）
+
+- High、Medium和Low为虚拟变量，分别表示两个指标SUE前20%、中间40%和最后20%的交集
 
 ---
 
@@ -324,7 +441,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_233741.png?raw=true" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -334,7 +451,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_234358.png?raw=true" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -344,7 +461,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_234417.png?raw=true" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -354,7 +471,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Nagel(2005
+## Nagel (2005)机构持有量理论
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_234924.png?raw=true" width="95%" style="display: block; margin: auto;" /&gt;
 
@@ -364,9 +481,10 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Nagel(2005)表面机构持有量低时，只能融券很少的股份，增加了卖空限制
+## Nagel (2005)机构持有量理论
 
 &lt;img src="https://github.com/chen-weitao/logo/blob/main/2023-10-29_234948.png?raw=true" width="95%" style="display: block; margin: auto;" /&gt;
+
 ---
 
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
@@ -375,45 +493,32 @@ background-position: 90% 8%
 
 ## 稳健性检验
 
-
----
-
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
-background-size: 100px
-background-position: 90% 8%
-
-## remark.js 与 xaringan 的区别
-remark.js （左）与 **xaringan** （右）：
-
 .pull-left[
-1. 需要一个 HTML 容器文件；
+1. 月平均成交量；
 
-1. 只能用 Markdown；
+1. 成交量加权组合收益率；
 
-1. 若想自动播放幻灯片需要写 JavaScript；
+1. 月度频率；
 
-1. 需手工配置 MathJax；
+1. 用CAPM模型计算CAR；
 
-1. 用 `*` 高亮一行代码；
+1. 没有考虑另外的分歧差异；
 
-1. 编辑 Markdown 之后需要刷新浏览器看结果；
 ]
 
 .pull-right[
-1. 用 R Markdown 文档生成幻灯片；
+1. 持仓量（相关系数0.77）；
 
-1. Markdown 里可以嵌入 R 代码；
+1. 平均加权组合收益率；
 
-1. 可用 `autoplay` 选项自动播放；
+1. 周度频率；
 
-1. MathJax 无需特别配置；&lt;sup&gt;*&lt;/sup&gt;
+1. 用五因子模型计算CAR；
 
-1. 用 `{{}}` 高亮一行代码;
+1. 增加控制变量，即期权交易量在不同在值程度上的离散程度；
 
-1. 用 RStudio 插件“Infinite Moon Reader”自动预览幻灯片；
 ]
 
-.footnote[[*] 下一页有数学公式例子。]
 
 ---
 
@@ -436,7 +541,7 @@ background-position: 90% 8%
 class: center, middle
 
 # 谢谢
-本幻灯片发布于 [**GitHub**](https://github.com/chen-weitao/Presentation1101) 
+本幻灯片发布于 &lt;u&gt;[**GitHub**](https://github.com/chen-weitao/Presentation1101) &lt;u&gt;
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

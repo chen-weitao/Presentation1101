@@ -16,6 +16,10 @@ output:
       
 ---
 
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
 ```{r xaringan-themer, include=FALSE, warning= FALSE}
 library(xaringanthemer)
 style_duo_accent(primary_color = "#1E64A5",
@@ -112,14 +116,34 @@ background-position: 90% 8%
 
 ## 描述性统计
 
+
 ```{r, echo=FALSE}
 library(kableExtra)
 library(readxl)
 Statistics <- read_excel("描述性统计.xlsx", .name_repair = "minimal")
-kbl(Statistics,caption = "表1 描述性统计") %>%
-  kable_styling(bootstrap_options = c())
+kbl(Statistics, caption = "表1 描述性统计") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),font_size = 18)%>%
+  pack_rows("A. All stocks", 1, 5) %>%
+  pack_rows("B. 500 largest stocks", 6, 10)
 ```
 
+---
+
+background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-size: 100px
+background-position: 90% 8%
+
+## 相关系数
+
+```{r, echo=FALSE}
+library(kableExtra)
+library(readxl)
+corr <- read_excel("相关系数表.xlsx", .name_repair = "minimal")
+kbl(corr, caption = "表2 相关系数表") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), font_size = 15.5)%>%
+  pack_rows("A. All stocks", 1, 6) %>%
+  pack_rows("B. 500 largest stocks", 7, 12)
+```
 ---
 
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
@@ -150,7 +174,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Fama-MacBeth对下月月度收益率
+## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223552.png?raw=true")
@@ -161,7 +185,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Fama-MacBeth对下月月度收益率
+## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223746.png?raw=true")
@@ -175,26 +199,27 @@ background-position: 90% 8%
 
 ## 影响机制
 
-- Atmaz and Basak (2018)说明了即使没有卖空限制，分歧也可能与未来回报呈负相关。
+- Atmaz and Basak (2018)认为盈利偏差影响分歧和预期收益率的关系
 
-- Hong and Sraer (2016)认为高beta的股票有更大的投资者分歧，由于隐形的卖空限制，更容易被高估。
+- 基于季节性随机游走的盈利意外定义（Earnings Surprise,  $SUE$）：
+$$SUE_{i,q}^{SRW\text{ }}=\frac{{{E}_{i,q}}-E_{i,q-4}^{\text{ }}}{{{P}_{i,q}}}$$
+其中，  $i$ 是某个公司； $q$ 是某个季度；  ${E}_{i,q}$ 是当季度每股盈利； ${E}_{i,q-4}$ 是去年同季度的每股盈利； ${P}_{i,q}$是财报发布前20天的股价； ${SRW}$是季节性随机游走（Seasonal Random Walk）
 
-- 通过盈利意外 (earning surprise, SUE) 的高低来定义积极和消极的现金流新闻。
-
-$$SUE_{i,q}^{SRW}=\frac{{{E}_{i,q}}-{{E}_{i,q-4}}}{{{P}_{i,q}}}$$
-
-其中， $\alpha+\beta$ 是实际的季度每股盈利（earnings per share），对公司 $i$ 和季度 $q$ 。 ${E}_{i,q-4}$去年同季度的每股盈利。  ${P}_{i,q}$是财报发布（earnings announcement）前20天的股价。 $SRW$是季节性随机游走（seasonal random walk）
-- 基于分析师预测来定义盈利意外，每股实际盈利减去平均的分析师预测
+- 基于分析师预测（ $Analyst$）来定义盈利意外：
 $$SUE_{i,q}^{Analyst\text{ }}=\frac{{{E}_{i,q}}-E_{i,q}^{Analyst\text{ }}}{{{P}_{i,q}}}$$
+其中， ${E}_{i,q}^{Analyst}$ 是分析师盈利预测平均值，其余定义不变
+
 ---
+
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
 background-size: 100px
 background-position: 90% 8%
 
-## 累计异象收益，因变量
+## 影响机制
 
-收益公告日后的累积异象收益 (CAR) 定义为股票的已实现累积收益率与其预期累积收益率之间的差异，其中预期收益率使用资本资产定价模型 (CAPM) 来估计。
+- Hong and Sraer (2016)认为负向效应在高beta的股票中更为显著
 
+- 回归方程如下：
 $$\begin{align}
   &  CAR\text{ }{{[1,5]}_{i,t}}={{\alpha }^{High\text{ }}}Hig{{h}_{i,t}}+{{\alpha }^{Medium\text{ }}}Mediu{{m}_{i,t}}+{{\alpha }^{Low\text{ }}}Lo{{w}_{i,t}} \\ 
  & \,\,+{{\beta }^{Dis\times High\text{ }}}Disagreemen{{t}_{i,t-1}}\times Hig{{h}_{i,t}} \\ 
@@ -202,7 +227,11 @@ $$\begin{align}
  & \,\,+{{\beta }^{Dis\times Low\text{ }}}Disagreemen{{t}_{i,t-1}}\times Lo{{w}_{i,t}}+Control{{s}_{i,t}}+{{\varepsilon }_{i,t}}  
 \end{align}$$
 
-其中CAR为收益公告日后第1至5天的累计超额收益；disagreement是在收益公告前10天的分歧；High, Medium, Low是虚拟变量，分别指示SUE排在前20%，中间40%，最后20%。如果排名不是这两个的合集，那就去除这些样本。由于波动率策略交易在财报发布前后比较普遍，在估计分歧时，去除平值期权。 cumulative abnormal returns是财报发布后五天的累计超额收益。
+- CAR（Cumulative Abnormal Returns）为财报发布日后第1至5天的累计超额收益（相对于市场风险）
+
+- Disagreement为财报发布日前10天的平均分歧（不包括平值期权）
+
+- High、Medium和Low为虚拟变量，分别表示两个指标SUE前20%、中间40%和最后20%的交集
 
 ---
 
@@ -210,7 +239,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_233741.png?raw=true")
@@ -222,7 +251,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234358.png?raw=true")
@@ -234,7 +263,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## 现金流分类回归
+## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234417.png?raw=true")
@@ -246,7 +275,7 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Nagel(2005
+## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234924.png?raw=true")
@@ -258,11 +287,12 @@ background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?
 background-size: 100px
 background-position: 90% 8%
 
-## Nagel(2005)表面机构持有量低时，只能融券很少的股份，增加了卖空限制
+## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
 knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234948.png?raw=true")
 ```
+
 ---
 
 background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
@@ -271,45 +301,32 @@ background-position: 90% 8%
 
 ## 稳健性检验
 
-
----
-
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
-background-size: 100px
-background-position: 90% 8%
-
-## remark.js 与 xaringan 的区别
-remark.js （左）与 **xaringan** （右）：
-
 .pull-left[
-1. 需要一个 HTML 容器文件；
+1. 月平均成交量；
 
-1. 只能用 Markdown；
+1. 成交量加权组合收益率；
 
-1. 若想自动播放幻灯片需要写 JavaScript；
+1. 月度频率；
 
-1. 需手工配置 MathJax；
+1. 用CAPM模型计算CAR；
 
-1. 用 `*` 高亮一行代码；
+1. 没有考虑另外的分歧差异；
 
-1. 编辑 Markdown 之后需要刷新浏览器看结果；
 ]
 
 .pull-right[
-1. 用 R Markdown 文档生成幻灯片；
+1. 持仓量（相关系数0.77）；
 
-1. Markdown 里可以嵌入 R 代码；
+1. 平均加权组合收益率；
 
-1. 可用 `autoplay` 选项自动播放；
+1. 周度频率；
 
-1. MathJax 无需特别配置；<sup>*</sup>
+1. 用五因子模型计算CAR；
 
-1. 用 `{{}}` 高亮一行代码;
+1. 增加控制变量，即期权交易量在不同在值程度上的离散程度；
 
-1. 用 RStudio 插件“Infinite Moon Reader”自动预览幻灯片；
 ]
 
-.footnote[[*] 下一页有数学公式例子。]
 
 ---
 
@@ -332,5 +349,5 @@ background-position: 90% 8%
 class: center, middle
 
 # 谢谢
-本幻灯片发布于 [**GitHub**](https://github.com/chen-weitao/Presentation1101) 
+本幻灯片发布于 <u>[**GitHub**](https://github.com/chen-weitao/Presentation1101) <u>
 
