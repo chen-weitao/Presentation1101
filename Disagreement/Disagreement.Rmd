@@ -22,7 +22,7 @@ xaringanExtra::use_scribble()
 
 ```{r xaringan-themer, include=FALSE, warning= FALSE}
 library(xaringanthemer)
-style_duo_accent(primary_color = "#1E64A5",
+style_duo_accent(primary_color = "#005A98",
                  secondary_color = "#E6E6E6",
                  header_font_google= google_font("Noto Sans"),
                  text_font_google = google_font("Noto Sans"),
@@ -300,6 +300,8 @@ background-size: 100px
 background-position: 90% 8%
 
 ## 稳健性检验
+
+- 稳健性检验前（左）和稳健性检验后（右）：
 
 .pull-left[
 1. 月平均成交量；
