@@ -34,7 +34,7 @@ style_duo_accent(primary_color = "#005A98",
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -48,7 +48,7 @@ background-position: 90% 8%
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -65,7 +65,7 @@ background-position: 90% 8%
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -87,7 +87,7 @@ $$DisagreementSC=\small\frac{Min(POS,NE{{G}^{SC}})}{Max(POS,NE{{G}^{SC}})}$$
 $$NE{{G}^{SC}}=\small\sum{\left| {{\Delta }^{Put}} \right|\left( O{{B}^{Put}}+C{{B}^{Put}} \right)+\left| {{\Delta }^{Call}} \right|\left( C{{S}^{Call}} \right)}$$
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -110,7 +110,7 @@ $$Directional=\small\frac{Directional}{Max(POS,NEG)}$$
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -129,7 +129,7 @@ kbl(Statistics, caption = "表1 描述性统计") %>%
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -146,54 +146,54 @@ kbl(corr, caption = "表2 相关系数表") %>%
 ```
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 投资组合收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_214550.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_214550.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 投资组合收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_215525.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_215525.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url('logo/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223552.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_223552.png")
 ```
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_223746.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_223746.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
@@ -211,7 +211,7 @@ $$SUE_{i,q}^{Analyst\text{ }}=\frac{{{E}_{i,q}}-E_{i,q}^{Analyst\text{ }}}{{{P}_
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
@@ -235,67 +235,67 @@ $$\begin{align}
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_233741.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_233741.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234358.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_234358.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234417.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_234417.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234924.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_234924.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
 ## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
-knitr::include_graphics("https://github.com/chen-weitao/logo/blob/main/2023-10-29_234948.png?raw=true")
+knitr::include_graphics("logo/2023-10-29_234948.png")
 ```
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
@@ -332,7 +332,7 @@ background-position: 90% 8%
 
 ---
 
-background-image: url(https://github.com/chen-weitao/logo/blob/main/xiaohui.jpg?raw=true)
+background-image: url(logo/xiaohui.jpg)
 background-size: 100px
 background-position: 90% 8%
 
