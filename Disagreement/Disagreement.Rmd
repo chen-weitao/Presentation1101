@@ -34,21 +34,21 @@ style_duo_accent(primary_color = "#005A98",
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 结论
 
-- 投资者分歧降低股票未来收益率
+- 投资者分歧和预期股票收益率负相关
 
-- 盈利与预期偏差，投资者分歧和未来预期收益率的相关性
+- 盈利与预期偏差影响二者相关性
 
-- 在高贝塔、难以卖空的股票中更明显，二者相关性
+- 二者相关性在高贝塔、难以卖空的股票中更明显
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -61,11 +61,11 @@ background-position: 90% 8%
 
 1. Customers：散户和机构投资者（对冲基金）
 
-2. Firms：Proprietary Trading Desks(和做市商的相关性0.44)
+2. Firms：Proprietary Trading Desks（和做市商的相关性0.44）
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -87,7 +87,7 @@ $$DisagreementSC=\small\frac{Min(POS,NE{{G}^{SC}})}{Max(POS,NE{{G}^{SC}})}$$
 $$NE{{G}^{SC}}=\small\sum{\left| {{\Delta }^{Put}} \right|\left( O{{B}^{Put}}+C{{B}^{Put}} \right)+\left| {{\Delta }^{Call}} \right|\left( C{{S}^{Call}} \right)}$$
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -110,7 +110,7 @@ $$Directional=\small\frac{Directional}{Max(POS,NEG)}$$
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -129,7 +129,7 @@ kbl(Statistics, caption = "表1 描述性统计") %>%
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -146,54 +146,54 @@ kbl(corr, caption = "表2 相关系数表") %>%
 ```
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 投资组合收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_214550.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_214550.png")
 ```
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 投资组合收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_215525.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_215525.png")
 ```
 
 ---
 
-background-image: url('logo/xiaohui.jpg')
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_223552.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_223552.png")
 ```
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## Fama-MacBeth对下月收益率
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_223746.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_223746.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -211,7 +211,7 @@ $$SUE_{i,q}^{Analyst\text{ }}=\frac{{{E}_{i,q}}-E_{i,q}^{Analyst\text{ }}}{{{P}_
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -235,67 +235,67 @@ $$\begin{align}
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_233741.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_233741.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_234358.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_234358.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## 按beta分类的回归结果
 
 ```{r, echo=FALSE,fig.align='center', out.width='100%'}
-knitr::include_graphics("logo/2023-10-29_234417.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_234417.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
-knitr::include_graphics("logo/2023-10-29_234924.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_234924.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
 ## Nagel (2005)机构持有量理论
 
 ```{r, echo=FALSE,fig.align='center', out.width='95%'}
-knitr::include_graphics("logo/2023-10-29_234948.png")
+knitr::include_graphics("https://cdn.jsdelivr.net/gh/chen-weitao/images/test/2023-10-29_234948.png")
 ```
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
@@ -332,7 +332,7 @@ background-position: 90% 8%
 
 ---
 
-background-image: url(logo/xiaohui.jpg)
+background-image: url('https://cdn.jsdelivr.net/gh/chen-weitao/images/test/xiaohui.jpg')
 background-size: 100px
 background-position: 90% 8%
 
